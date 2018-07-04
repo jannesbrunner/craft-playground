@@ -1,0 +1,1 @@
+<svg viewBox="0 0 1080 154" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><desc>Example lingrad01 - fill a rectangle using a linear gradient paint server</desc><defs><linearGradient id="a"><stop offset="0%" stop-color="#1b1e25"/><stop offset="100%" stop-color="#193a59"/></linearGradient></defs><path fill="url(#a)" d="M0 154L1080 0v154"/></svg>
