@@ -11,8 +11,8 @@
         <!-- <link rel="stylesheet" href="css/styles.css"> -->
         <link rel="stylesheet" href="{{ siteUrl }}src/css/styles.css">
         <!--[if lt IE 9]>			
-    	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    	<link rel="stylesheet" href="js/vendor/outdatedBrowser.min.css">
+    	<script src="{{ siteUrl }}src/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    	<link rel="stylesheet" href="{{ siteUrl }}src/js/vendor/outdatedBrowser.min.css">
     <![endif]-->
         <!-- FONTS -->
         <!-- add updated script from typekit or google fonts -->
@@ -64,11 +64,11 @@
         <div class="hero">
             <picture class="bg-image">
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source srcset="img/img_hero.jpg" media="(min-width: 1000px)">
-                <source srcset="img/img_hero.jpg" media="(min-width: 760px)">
+                <source srcset="{{ siteUrl }}src/img/img_hero.jpg" media="(min-width: 1000px)">
+                <source srcset="{{ siteUrl }}src/img/img_hero.jpg" media="(min-width: 760px)">
                 <!--[if IE 9]></video><![endif]-->
                 <!--1440x848-->
-                <img src="img/img_hero.jpg" alt="" />
+                <img src="{{ siteUrl }}src/img/img_hero.jpg" alt="" />
             </picture>
             <div class="wrapper hero__overlay text-center">
                 <div class="flex-row">
@@ -106,7 +106,7 @@
                             </div>
                             <div class=" flex-col-xs-8 flex-col-xs-offset-2 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-offset-0 first-desktop-down px-desktop-5x">
                                 <div class="illustration box-shadow">
-                                    <img src="img/svg_time.svg" alt="illustration time management">
+                                    <img src="{{ siteUrl }}src/img/svg_time.svg" alt="illustration time management">
                                     <span class="illustration__number box-shadow">1</span>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                         <div class="flex-row middle-xs">
                             <div class="flex-col-xs-8 flex-col-xs-offset-2 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-offset-0 px-desktop-5x">
                                 <div class="illustration box-shadow">
-                                    <img src="img/svg_complex.svg" alt="illustration Complex to Clean">
+                                    <img src="{{ siteUrl }}src/img/svg_complex.svg" alt="illustration Complex to Clean">
                                     <span class="illustration__number illustration__number--alt box-shadow">2</span>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                             </div>
                             <div class=" flex-col-xs-8 flex-col-xs-offset-2 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-offset-0 first-desktop-down px-desktop-5x">
                                 <div class="illustration box-shadow">
-                                    <img src="img/svg_decision.svg" alt="illustration Better Decision Making">
+                                    <img src="{{ siteUrl }}src/img/svg_decision.svg" alt="illustration Better Decision Making">
                                     <span class="illustration__number box-shadow">3</span>
                                 </div>
                             </div>
@@ -221,21 +221,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>
         window.jQuery || document.write(
-            '<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
+            '<script src="{{ siteUrl }}src/js/vendor/jquery-1.11.3.min.js"><\/script>')
         </script>
         <!-- Slick carousel -->
-        <!-- <script src="js/vendor/slick.js"></script> -->
+        <!-- <script src="{{ siteUrl }}src/js/vendor/slick.js"></script> -->
         <!-- Match height -->
-        <script src="js/vendor/jquery-match-height.js"></script>
+        <script src="{{ siteUrl }}src/js/vendor/jquery-match-height.js"></script>
         <!-- Bootstrap -->
-        <script src="js/vendor/bootstrap/modal.js"></script>
-        <script src="js/vendor/bootstrap/transition.js"></script>
+        <script src="{{ siteUrl }}src/js/vendor/bootstrap/modal.js"></script>
+        <script src="{{ siteUrl }}src/js/vendor/bootstrap/transition.js"></script>
         <!-- Sticky (affix) -->
-        <script src="js/vendor/jquery.sticky.js"></script>
+        <script src="{{ siteUrl }}src/js/vendor/jquery.sticky.js"></script>
         <!-- Plyr (video player) -->
-        <script src="js/vendor/plyr.min.js"></script>
+        <script src="{{ siteUrl }}src/js/vendor/plyr.min.js"></script>
         <!--[if lt IE 9]>			
-    	<script src="js/vendor/outdatedBrowser.min.js"></script>
+    	<script src="{{ siteUrl }}src/js/vendor/outdatedBrowser.min.js"></script>
     	<script>
     		$( document ).ready(function() {
 			    outdatedBrowser({
@@ -247,6 +247,6 @@
     	</script>
     <![endif]-->
         <!-- All JS actions that are site wide should be in this file -->
-        <script src="js/main.js"></script>
+        <script src="{{ siteUrl }}src/js/main.js"></script>
     </body>
 </html>
