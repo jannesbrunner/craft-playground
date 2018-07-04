@@ -1,0 +1,97 @@
+{% extends "_layout" %}
+{% block content %}
+<div class="hero">
+    <picture class="bg-image">
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="{{ siteUrl }}src/img/img_hero.jpg" media="(min-width: 1000px)">
+        <source srcset="{{ siteUrl }}src/img/img_hero.jpg" media="(min-width: 760px)">
+        <!--[if IE 9]></video><![endif]-->
+        <!--1440x848-->
+        <img src="{{ siteUrl }}src/img/img_hero.jpg" alt=""/>
+    </picture>
+    <div class="wrapper hero__overlay text-center">
+        <div class="flex-row">
+            <div class="flex-col-tablet-8 flex-col-tablet-offset-2">
+                <h6 class="color-white type-sm type-uppercase type-spacing">From complex to clean</h6>
+                <h1 class="color-white">Making Sense Of Data</h1>
+                <div class="flex-col-tablet-10 flex-col-tablet-offset-1">
+                    <p class="color-white">Data Chemist makes the complicated simple: we transform the messy, inconsistent data sets of the real world into clean, structured and integrated data. Our customers improve decision-making and reduce costs as a result.</p>
+                </div>
+                <a href="#main" class="page-scroll btn btn--primary">Find out more</a>
+            </div>
+        </div>
+    </div>
+    <a href="#main" class="page-scroll hero__scrollto scroll-to box-shadow">
+        <i class="icon-arrow_down"></i>
+    </a>
+</div>
+<!-- Main -->
+<main id="main">
+    <div class="section--lg text-center">
+        <section class="section animate">
+            <div class="wrapper">
+                <div class="flex-row middle-xs">
+                    <div class=" flex-col-tablet-8 flex-col-tablet-offset-2 flex-col-desktop-6 flex-col-desktop-offset-0 text-right-desktop">
+                        <h2>Time Management</h2>
+                        <p>Data should be a competitive advantage. Too often, it isn’t. Instead we spend vast amounts of time managing inconsistent and inaccurate data that can only support very limited queries. As a result, the promise behind ‘business intelligence’ is dead in the water.</p>
+                        <hr>
+                    </div>
+                    <div class=" flex-col-xs-8 flex-col-xs-offset-2 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-offset-0 first-desktop-down px-desktop-5x">
+                        <div class="illustration box-shadow">
+                            <img src="{{ siteUrl }}src/img/svg_time.svg" alt="illustration time management">
+                            <span class="illustration__number box-shadow">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section animate">
+            <div class="wrapper">
+                <div class="flex-row middle-xs">
+                    <div class="flex-col-xs-8 flex-col-xs-offset-2 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-offset-0 px-desktop-5x">
+                        <div class="illustration box-shadow">
+                            <img src="{{ siteUrl }}src/img/svg_complex.svg" alt="illustration Complex to Clean">
+                            <span class="illustration__number illustration__number--alt box-shadow">2</span>
+                        </div>
+                    </div>
+                    <div class="flex-col-tablet-8 flex-col-tablet-offset-2 flex-col-desktop-6 flex-col-desktop-offset-0 text-left-desktop">
+                        <h2>Complex to Clean</h2>
+                        <p>That’s where Data Chemist comes in. We use artificial intelligence techniques to rapidly transform even the most complex data systems into clean, usable, meaningful data sets that deliver on the promise of data.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section animate">
+            <div class="wrapper">
+                <div class="flex-row middle-xs">
+                    <div class="flex-col-tablet-8 flex-col-tablet-offset-2 flex-col-desktop-6 flex-col-desktop-offset-0 text-right-desktop">
+                        <h2>Better Decision Making</h2>
+                        <p>That means better decision making as your data - and the connections between data silos - informs your organization like never before. It means regulatory compliance, delivered without fuss. And it means huge cost savings on traditional data management approaches.</p>
+                        <hr>
+                    </div>
+                    <div class=" flex-col-xs-8 flex-col-xs-offset-2 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-offset-0 first-desktop-down px-desktop-5x">
+                        <div class="illustration box-shadow">
+                            <img src="{{ siteUrl }}src/img/svg_decision.svg" alt="illustration Better Decision Making">
+                            <span class="illustration__number box-shadow">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="section bg-primary background--cover py-7x" style="background-image: url(img/bg_shapes.svg)">
+        <div class="wrapper">
+            <div class="flex-row">
+                <div class="flex-col-tablet-6 flex-col-tablet-offset-3 color-white text-center">
+                    <h2>Talk to Us</h2>
+                    <p>If you’d like to see Data Chemist in action - on your own data - get in touch. Unlike every other vendor in the market we can show real results with your data in days.</p>
+                    <a href="mailto:info@datachemist.net" class="btn btn--ghost">Get in touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Main ./end -->
+{% endblock %}

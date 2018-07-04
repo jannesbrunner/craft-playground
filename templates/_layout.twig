@@ -1,0 +1,16 @@
+<!-- include "meta-head.html" -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <meta name="description" content="">
+    {% embed "embeds/head.twig" %}{% endembed %}
+</head>
+<title></title>
+<body>
+    {% embed "embeds/header.twig" %}{% endembed %}
+
+    {% block content %}{% endblock %}
+
+    {% embed "embeds/footer.twig" %}{% endembed %}
+</body>
+
+</html>
