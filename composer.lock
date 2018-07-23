@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f33d395e540bbfded5098058e65e35e4",
+    "content-hash": "ac3970050807f6e394343a483e6ee578",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1528,6 +1528,56 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
+            "name": "rias/craft-stripe-webhooks",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rias500/craft-stripe-webhooks/zipball/51c608178591f6e1b1374268b63fcd62708d50f5",
+                "reference": "51c608178591f6e1b1374268b63fcd62708d50f5",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "stripe/stripe-php": "^6.10"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Stripe Webhooks",
+                "handle": "stripe-webhooks",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-stripe-webhooks/master/CHANGELOG.md",
+                "class": "rias\\stripewebhooks\\StripeWebhooks"
+            },
+            "autoload": {
+                "psr-4": {
+                    "rias\\stripewebhooks\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rias",
+                    "homepage": "https://rias.be"
+                }
+            ],
+            "description": "Handle Stripe webhooks in a CraftCMS application",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "stripe webhooks"
+            ],
+            "support": {
+                "docs": "https://github.com/Rias500/craft-stripe-webhooks/blob/master/README.md",
+                "issues": "https://github.com/Rias500/craft-stripe-webhooks/issues"
+            },
+            "time": "2018-07-08T10:53:55+00:00"
+        },
+        {
             "name": "seld/cli-prompt",
             "version": "1.0.3",
             "dist": {
@@ -1652,6 +1702,50 @@
                 "phra"
             ],
             "time": "2015-10-13T18:44:15+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v6.10.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/879ab79c842a759339cee955fc925491847ac7d9",
+                "reference": "879ab79c842a759339cee955fc925491847ac7d9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2018-07-19T09:52:11+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
