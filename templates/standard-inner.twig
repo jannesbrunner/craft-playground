@@ -63,8 +63,10 @@
                                 </div>
                             </dt>
                             <dd>
+                            {% if entry.author.firstName %}
                                 Written by
                                 <a href="#" class="link-clean">{{ entry.author.firstName }} {{ entry.author.lastName }}</a>
+                            {% endif %}
                                 <br> Posted
                                 <a href="#" class="link-clean"></a>
                             </dd>
