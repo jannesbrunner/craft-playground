@@ -31,13 +31,13 @@
                         <li>
                             <a href="{{ siteUrl}}blog">Blog</a>
                         </li>
-                        {% if entry.hasDescendants() %}
-                            <li>
-                                <a href="{{ entry.uri }}">{{ entry.title }}</a>
-                            </li>
-                            {% for crumb in entry.getDescendants() %}
+                        {% if entry.hasAncenstors() %}
+                            {% for crumb in entry.getAncenstors() %}
                                 <li>
                                     {{ crumb.getLink() }}
+                                </li>
+                                <li>
+                                    {{ entry.title }}
                                 </li>
                             {% endfor %}
                         {% else %}
