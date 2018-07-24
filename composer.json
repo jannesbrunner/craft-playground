@@ -19,12 +19,13 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.0.14",
+    "craftcms/cms": "3.0.16.1",
     "vlucas/phpdotenv": "^2.4.0",
     "froala/craft-froala-wysiwyg": "v2.8.1-rc.3",
     "ether/seo": "v3.3.0",
     "mmikkel/cp-clearcache": "1.0.2",
-    "rias/craft-stripe-webhooks": "1.0.0"
+    "rias/craft-stripe-webhooks": "1.0.0",
+    "craftcms/ckeditor": "1.0.0-beta.2"
   },
   "autoload": {
     "psr-4": {
