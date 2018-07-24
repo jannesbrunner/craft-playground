@@ -31,7 +31,7 @@
                         <li>
                             <a href="{{ siteUrl}}blog">Blog</a>
                         </li>
-                        {% if entry.hasAncenstors() %}
+                        {% if entry.level > 1 %}
                             {% for crumb in entry.getAncenstors() %}
                                 <li>
                                     {{ crumb.getLink() }}
