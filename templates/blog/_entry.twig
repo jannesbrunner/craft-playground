@@ -32,14 +32,14 @@
                             <a href="{{ siteUrl}}blog">Blog</a>
                         </li>
                         {% if entry.level > 1 %}
-                            {% for crumb in entry.getAncenstors() %}
+                            {% for crumb in entry.ancestors %}
                                 <li>
                                     {{ crumb.getLink() }}
                                 </li>
-                                <li>
-                                    {{ entry.title }}
-                                </li>
                             {% endfor %}
+                            <li>
+                                {{ entry.title }}
+                            </li>
                         {% else %}
                             <li>
                                 {{ entry.title }}
