@@ -29,19 +29,21 @@
                                 <i class="icon-house"></i>
                             </a>
                         <li>
-                            <a href="{{ siteUrl}}/blog">Blog</a>
+                            <a href="{{ siteUrl}}blog">Blog</a>
                         </li>
-                        <li>
-                            {% if entry.hasDescendants() %}
+                        {% if entry.hasDescendants() %}
+                            <li>
                                 <a href="{{ entry.uri }}">{{ entry.title }}</a>
-                            {% else %}
-                                {{ entry.title }}
-                            {% endif %}
-                        </li>
-                        {% if entry.level > 1 %}
-                            {% for crumb in entry.getAncestors() %}
-                                <li>{{ crumb.getLink() }}</li>
+                            </li>
+                            {% for crumb in entry.getDescendants() %}
+                                <li>
+                                    {{ crumb.getLink() }}
+                                </li>
                             {% endfor %}
+                        {% else %}
+                            <li>
+                                {{ entry.title }}
+                            </li>
                         {% endif %}
                     </ul>
                 </div>
