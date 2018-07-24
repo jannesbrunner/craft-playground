@@ -67,7 +67,7 @@
                                 Written by
                                 <a href="#" class="link-clean">{{ entry.author.firstName }} {{ entry.author.lastName }}</a>
                             {% endif %}
-                                <br> Posted
+                                <br> Posted {{ entry.postDate | date("d.m.Y") }}
                                 <a href="#" class="link-clean"></a>
                             </dd>
                         </dl>
