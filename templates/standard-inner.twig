@@ -96,6 +96,7 @@
                         </ul>
                         <h4 class="mb-desktop-2x">Suggested Posts</h4>
                         <div class="flex-row pb-tablet-3x pb-desktop-0x">
+                        {% for entry in craft.entries.section('blog').limit(2).all() %}
                             <div class="flex-col-tablet-6 flex-col-desktop-12">
                                 <!--380x108-->
                                 <img class="img-responsive mb-2x hidden-desktop-down" src="{{ siteUrl }}src/img/standard-inner/fan.jpg"
@@ -106,30 +107,14 @@
                                 <!--673x235-->
                                 <img class="img-responsive mb-2x hidden-tablet" src="{{ siteUrl }}src/img/standard-inner/fan-mob-full.jpg"
                                 alt="fan-image">
-                                <p class="mb-1x">Technology</p>
-                                <h3>Blog article goes here lorem ipsum second line</h3>
-                                <p class="mb-1x mb-desktop-2x">Posted March 27th, 2018 <span class="dib--alt ml-25">by <a href="#" class="link-clean">David Longe</a></span></p>
+                                <p class="mb-1x">{category}</p>
+                                <h3>{{ entry.title }}</h3>
+                                <p class="mb-1x mb-desktop-2x">Posted March {{ entry.postDate | date("d.m.Y") }} <span class="dib--alt ml-25">by <a href="#" class="link-clean">{{ entry.author.firstName }} {{ entry.author.lastName }}</a></span></p>
                                 <p class="mb-4x">
-                                    <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i></a>
+                                    <a href="{{ entry.uri }}" class="link-plain">Read more<i class="icon-arrow_right-01"></i></a>
                                 </p>
                             </div>
-                            <div class="flex-col-tablet-6 flex-col-desktop-12">
-                                <!--380x108-->
-                                <img class="img-responsive mb-2x hidden-desktop-down" src="{{ siteUrl }}src/img/standard-inner/earth.jpg"
-                                alt="earth-image">
-                                <!--348x235-->
-                                <img class="img-responsive mb-2x hidden-tablet-down hidden-desktop" src="{{ siteUrl }}src/img/standard-inner/buildings-tab.jpg"
-                                alt="building-image">
-                                <!--673x235-->
-                                <img class="img-responsive mb-2x hidden-tablet" src="{{ siteUrl }}src/img/standard-inner/buildings-mob-full.jpg"
-                                alt="building-image">
-                                <p class="mb-1x">Technology</p>
-                                <h3>Blog article goes here lorem ipsum second line</h3>
-                                <p class="mb-1x mb-desktop-2x">Posted March 27th, 2018 <span class="dib--alt ml-25">by <a href="#" class="link-clean">David Longe</a></span></p>
-                                <p class="mb-4x">
-                                    <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i></a>
-                                </p>
-                            </div>
+                        {% endfor %}
                         </div>
                     </div>
                     <!-- Aside /.end -->
