@@ -121,15 +121,15 @@
             <!-- Aside /.end -->
         </div>
     </div>
-    <section class="section section--light pt-tablet-6x pt-desktop-7x pb-tablet-5x pb-desktop-6x">
-        <div class="wrapper wrapper--narrow">
-            <div class="text-center">
-                <h2 class="mb-1x type-lg type-lg--alt">Frequently Asked Questions</h2>
-                <p class="mb-5x mb-desktop-4x">Browse our list of Frequently Asked Questions</p>
-            </div>
-            <div class="flex-row">
-                <div class="flex-col-desktop-8 flex-col-desktop-offset-2">
-                    {% if entry.faq %}
+    {% if entry.faq %}
+        <section class="section section--light pt-tablet-6x pt-desktop-7x pb-tablet-5x pb-desktop-6x">
+            <div class="wrapper wrapper--narrow">
+                <div class="text-center">
+                    <h2 class="mb-1x type-lg type-lg--alt">Frequently Asked Questions</h2>
+                    <p class="mb-5x mb-desktop-4x">Browse our list of Frequently Asked Questions</p>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col-desktop-8 flex-col-desktop-offset-2">
                         <!-- Accordion -->
                         <div class="collapse-wrapper accordion-wrapper accordion-wrapper--full accordion" data-breakpoint="0">
                             {% for block in entry.faq.all() %}
@@ -145,11 +145,11 @@
                             {% endfor %}
                         </div>
                         <!-- Accordion ./end-->
-                    {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% endif %}
     <!-- Half-half -->
     <section class="mb-3x mb-tablet-2x mb-desktop-3x">
         <div class="wrapper wrapper--full">
