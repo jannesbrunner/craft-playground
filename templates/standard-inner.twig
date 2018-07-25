@@ -3,7 +3,7 @@
     <div class="hero hero--plain">
         <picture class="bg-image">
             <!--[if IE 9]><video style="display: none;"><![endif]-->
-            {% set bannerImage = entry.BannerImage.one() %}
+            {% set bannerImage = entry.bannerImage.one() %}
             {% if bannerImage %}
                 <source srcset="{{ bannerImage.one().getUrl('stiBanner') }}" media="(min-width: 1000px)">
                 <source srcset="{{ bannerImage.one().getUrl('stiBanner') }}" media="(min-width: 760px)">
