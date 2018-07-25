@@ -3,12 +3,15 @@
     <div class="hero hero--plain">
         <picture class="bg-image">
             <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="{{ entry.BannerImage.one().getUrl('stiBanner') }}" media="(min-width: 1000px)">
-            <source srcset="{{ entry.BannerImage.one().getUrl('stiBanner') }}" media="(min-width: 760px)">
-            <!--[if IE 9]></video><![endif]-->
-            <!--1440x390-->
-            <img src="{{ entry.BannerImage.one().getUrl('stiBanner') }}" alt=""/>
-        </picture>
+            {% set bannerImage = entry.BannerImage.one() %}
+            {% if bannerImage %}
+                <source srcset="{{ bannerImage.one().getUrl('stiBanner') }}" media="(min-width: 1000px)">
+                <source srcset="{{ bannerImage.one().getUrl('stiBanner') }}" media="(min-width: 760px)">
+                <!--[if IE 9]></video><![endif]-->
+                <!--1440x390-->
+                <img src="{{ bannerImage.one().getUrl('stiBanner') }}" alt=""/>
+            </picture>
+        {% endif %}
         <div class="wrapper wrapper--narrow hero__overlay text-center">
             <div class="flex-row">
                 <div class="flex-col-tablet-8 flex-col-tablet-offset-2">
