@@ -3,11 +3,11 @@
     <div class="hero hero--plain">
         <picture class="bg-image">
             <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="{{ siteUrl }}src/img/img_hero-02.jpg" media="(min-width: 1000px)">
-            <source srcset="{{ siteUrl }}src/img/img_hero-02.jpg" media="(min-width: 760px)">
+            <source srcset="{{ entry.BannerImage.getUrl('stiBanner') }}" media="(min-width: 1000px)">
+            <source srcset="{{ entry.BannerImage.getUrl('stiBanner') }}" media="(min-width: 760px)">
             <!--[if IE 9]></video><![endif]-->
             <!--1440x390-->
-            <img src="{{ siteUrl }}src/img/img_hero-02.jpg" alt=""/>
+            <img src="{{ entry.BannerImage.getUrl('stiBanner') }}" alt=""/>
         </picture>
         <div class="wrapper wrapper--narrow hero__overlay text-center">
             <div class="flex-row">
