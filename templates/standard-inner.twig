@@ -1,61 +1,64 @@
 {% extends "_layout.twig" %}
 {% block content %}
-        <div class="hero hero--plain">
-            <picture class="bg-image">
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source srcset="{{ siteUrl }}src/img/img_hero-02.jpg" media="(min-width: 1000px)">
-                <source srcset="{{ siteUrl }}src/img/img_hero-02.jpg" media="(min-width: 760px)">
-                <!--[if IE 9]></video><![endif]-->
-                <!--1440x390-->
-                <img src="{{ siteUrl }}src/img/img_hero-02.jpg" alt="" />
-            </picture>
-            <div class="wrapper wrapper--narrow hero__overlay text-center">
-                <div class="flex-row">
-                    <div class="flex-col-tablet-8 flex-col-tablet-offset-2">
-                        <h1 class="color-white type-xxl">{{ entry.bannerText }}</h1>
-                    </div>
+    <div class="hero hero--plain">
+        <picture class="bg-image">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="{{ siteUrl }}src/img/img_hero-02.jpg" media="(min-width: 1000px)">
+            <source srcset="{{ siteUrl }}src/img/img_hero-02.jpg" media="(min-width: 760px)">
+            <!--[if IE 9]></video><![endif]-->
+            <!--1440x390-->
+            <img src="{{ siteUrl }}src/img/img_hero-02.jpg" alt=""/>
+        </picture>
+        <div class="wrapper wrapper--narrow hero__overlay text-center">
+            <div class="flex-row">
+                <div class="flex-col-tablet-8 flex-col-tablet-offset-2">
+                    <h1 class="color-white type-xxl">{{ entry.bannerText }}</h1>
                 </div>
             </div>
         </div>
-        <!-- Main -->
-        <main>
-            <!-- Section: breadcrumbs -->
-            <section class="section-breadcrumbs">
-                <div class="wrapper wrapper--narrow">
-                    <div class="breadcrumbs">
-                        <ul class="list-reset">
-                            <li>
-                                <a href="{{ siteUrl }}"><i class="icon-house"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">{{ craft.request.firstSegment() }}</a>
-                            </li>
-                            <li>{{ currentSite.name }}</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- Section: breadcrumbs ./end-->
+    </div>
+    <!-- Main -->
+    <main>
+        <!-- Section: breadcrumbs -->
+        <section class="section-breadcrumbs">
             <div class="wrapper wrapper--narrow">
-                <div class="standard-inner">
-                    {{entry.title}}</h1>
+                <div class="breadcrumbs">
+                    <ul class="list-reset">
+                        <li>
+                            <a href="{{ siteUrl }}">
+                                <i class="icon-house"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">{{ craft.request.firstSegment() }}</a>
+                        </li>
+                        <li>{{ currentSite.name }}</li>
+                    </ul>
                 </div>
             </div>
-            <hr class="separator">
-            <div class="wrapper wrapper--narrow">
-                <div class="flex-row">
-                    <div class="flex-col-desktop-7">
-                        <!-- Standard-Inner -->
-                        <div class="standard-inner pt-0x">
-                           {{ entry.blogContent }}
-                        </div>
-                        <!-- Standard-Inner /.end-->
-                        <i class="icon-pin"></i>
-                        <p class="di mb-desktop-0x">Data Chemist -
-                            <a href="#" class="link-clean">Dublin, Ireland</a> (For Individual Job Position Pages)</p>
-                    </div>
-                    <!-- Aside -->
-                    <div class="flex-col-desktop-4 flex-col-desktop-offset-1">
+        </section>
+        <!-- Section: breadcrumbs ./end-->
+        <div class="wrapper wrapper--narrow">
+            <div class="standard-inner">
+                {{entry.title}}</h1>
+        </div>
+    </div>
+    <hr class="separator">
+    <div class="wrapper wrapper--narrow">
+        <div class="flex-row">
+            <div class="flex-col-desktop-7">
+                <!-- Standard-Inner -->
+                <div class="standard-inner pt-0x">
+                    {{ entry.mainContent }}
+                </div>
+                <!-- Standard-Inner /.end-->
+                <i class="icon-pin"></i>
+                <p class="di mb-desktop-0x">Data Chemist -
+                    <a href="#" class="link-clean">Dublin, Ireland</a>
+                    (For Individual Job Position Pages)</p>
+            </div>
+            <!-- Aside -->
+            {# <div class="flex-col-desktop-4 flex-col-desktop-offset-1">
                         <dl class="list-inline pt-2x pt-desktop-0x mb-4x mb-tablet-3x">
                             <dt>
                                 <div class="icon__container">
@@ -71,7 +74,7 @@
                                 <a href="#" class="link-clean"></a>
                             </dd>
                         </dl>
-                        <h4 class="mb-desktop-2x">Share this post:</h4>
+                        <h4 class="mb-desktop-2x">Share this page:</h4>
                         <ul class="list-social mb-4x">
                             <li>
                                 <div class="icon__container icon__container--alt">
@@ -116,334 +119,304 @@
                             </div>
                         {% endfor %}
                         </div>
+                    </div> #}
+            <!-- Aside /.end -->
+        </div>
+    </div>
+    <section class="section section--light pt-tablet-6x pt-desktop-7x pb-tablet-5x pb-desktop-6x">
+        <div class="wrapper wrapper--narrow">
+            <div class="text-center">
+                <h2 class="mb-1x type-lg type-lg--alt">Frequently Asked Questions</h2>
+                <p class="mb-5x mb-desktop-4x">Browse our list of Frequently Asked Questions</p>
+            </div>
+            <div class="flex-row">
+                <div class="flex-col-desktop-8 flex-col-desktop-offset-2">
+                    <!-- Accordion -->
+                    <div class="collapse-wrapper accordion-wrapper accordion-wrapper--full accordion" data-breakpoint="0">
+                        <div class="collapse accordion-block">
+                            <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                <span class="accordion__icon">
+                                    <span></span>
+                                    <span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
+                            <div class="collapse__content accordion__content">
+                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            </div>
+                        </div>
+                        <div class="collapse accordion-block">
+                            <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                <span class="accordion__icon">
+                                    <span></span>
+                                    <span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
+                            <div class="collapse__content accordion__content">
+                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            </div>
+                        </div>
+                        <div class="collapse accordion-block">
+                            <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                <span class="accordion__icon">
+                                    <span></span>
+                                    <span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
+                            <div class="collapse__content accordion__content">
+                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            </div>
+                        </div>
+                        <div class="collapse accordion-block">
+                            <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                <span class="accordion__icon">
+                                    <span></span>
+                                    <span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
+                            <div class="collapse__content accordion__content">
+                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            </div>
+                        </div>
+                        <div class="collapse accordion-block">
+                            <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                <span class="accordion__icon">
+                                    <span></span>
+                                    <span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
+                            <div class="collapse__content accordion__content">
+                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            </div>
+                        </div>
+                        <div class="collapse accordion-block">
+                            <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                <span class="accordion__icon">
+                                    <span></span>
+                                    <span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
+                            <div class="collapse__content accordion__content">
+                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Aside /.end -->
+                    <!-- Accordion ./end-->
                 </div>
             </div>
-            <section class="section section--light pt-tablet-6x pt-desktop-7x pb-tablet-5x pb-desktop-6x">
-                <div class="wrapper wrapper--narrow">
-                    <div class="text-center">
-                        <h2 class="mb-1x type-lg type-lg--alt">Frequently Asked Questions</h2>
-                        <p class="mb-5x mb-desktop-4x">Browse our list of Frequently Asked Questions</p>
+        </div>
+    </section>
+    <!-- Half-half -->
+    <section class="mb-3x mb-tablet-2x mb-desktop-3x">
+        <div class="wrapper wrapper--full">
+            <div class="flex flex-row">
+                <div class="flex-col-desktop-6 match-height">
+                    <div class="half half--text text-center text-left-desktop">
+                        <div class="half--text-content">
+                            <h3 class="mb-2x">Lorem Ipsum Dolor Sit</h3>
+                            <p class="mb-3x mb-tablet-2x mb-desktop-3x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat eiusmod tempor incididunt dolor ipsum ut labore et dolore.</p>
+                            <a href="#" class="btn btn--lg btn--ghost btn--ghost--dark hidden-desktop-down">Find out more</a>
+                            <a href="#" class="btn btn--ghost btn--ghost--dark hidden-desktop">Find out more</a>
+                        </div>
+                        <div class="shape-container">
+                            <img class="shape shape--half shape--half--top-right" src="{{ siteUrl }}src/img/standard-inner/shape-05.svg" alt="shape-right">
+                        </div>
                     </div>
+                </div>
+                <div class="flex-col-desktop-6 pos-r match-height">
+                    <div class="half half--img" style="background-image: url('{{ siteUrl }}src/img/standard-inner/bgr-half-02.jpg')"></div>
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <div class="flex-col-desktop-6 pos-r match-height hidden-desktop-down">
+                    <div class="half half--img" style="background-image: url('{{ siteUrl }}src/img/standard-inner/bgr-half-03.jpg')"></div>
+                </div>
+                <div class="flex-col-desktop-6 match-height">
+                    <div class="half half--text half--text--alt text-center text-left-desktop">
+                        <h3 class="mb-2x">Lorem Ipsum Dolor Sit</h3>
+                        <p class="mb-5x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat eiusmod tempor incididunt dolor ipsum ut labore et dolore.</p>
+                        <div class="shape-container">
+                            <img class="shape shape--half shape--half--bottom-left" src="{{ siteUrl }}src/img/standard-inner/shape-06.svg" alt="shape--left">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col-desktop-6 pos-r match-height hidden-desktop">
+                    <div class="half half--img bgr-center" style="background-image: url('{{ siteUrl }}src/img/standard-inner/bgr-half-03.jpg')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Half-half /.end-->
+    <!-- Full width -->
+    <section class="mb-2x mb-desktop-3x">
+        <div class="wrapper wrapper--full">
+            <div class="flex flex-row">
+                <div class="full full--top full--overlay" style="background: url('{{ siteUrl }}src/img/standard-inner/bgr-half-01.jpg')">
+                    <div class="flex-col-mobile-6 flex-col-mobile-offset-3 flex-col-desktop-4 flex-col-desktop-offset-4 text-center">
+                        <i class="full__icon icon-users"></i>
+                        <h2 class="type-lg type-lg--alt mb-1x">View our Team</h2>
+                        <p class="mb-3x type-narrow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#" class="btn btn--lg btn--ghost">View</a>
+                    </div>
+                    <div class="shape-container">
+                        <img class="shape shape--full shape--full--top-left" src="{{ siteUrl }}src/img/standard-inner/shape-01.svg" alt="shape-full-top-left">
+                        <img class="shape shape--full shape--full--top-right" src="{{ siteUrl }}src/img/standard-inner/shape-02.svg" alt="shape--full--top-right">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <div class="full full--bottom">
+                    <div class="flex-col-mobile-6 flex-col-mobile-offset-3 flex-col-desktop-4 flex-col-desktop-offset-4 text-center">
+                        <i class="full__icon icon-logo-round"></i>
+                        <h2 class="type-lg type-lg--alt mb-1x">Open Positions</h2>
+                        <p class="mb-3x type-narrow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    </div>
+                    <div class="shape-container">
+                        <img class="shape shape--alt" src="{{ siteUrl }}src/img/standard-inner/shape-04.svg" alt="shape-full-bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper--full wrapper--full--alt bg-light--alt">
+            <div class="wrapper">
+                <div class="brick-container">
                     <div class="flex-row">
-                        <div class="flex-col-desktop-8 flex-col-desktop-offset-2">
-                            <!-- Accordion -->
-                            <div class="collapse-wrapper accordion-wrapper accordion-wrapper--full accordion"
-                            data-breakpoint="0">
-                                <div class="collapse accordion-block">
-                                    <a role="button" class="collapse__toggle accordion__btn" href="#"><span class="accordion__icon"><span></span><span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
-                                    <div class="collapse__content accordion__content">
-                                        <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation. Ut enim ad minim
-                                            veniam, quis nostrud exercitation.</p>
-                                    </div>
-                                </div>
-                                <div class="collapse accordion-block">
-                                    <a role="button" class="collapse__toggle accordion__btn" href="#"><span class="accordion__icon"><span></span><span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
-                                    <div class="collapse__content accordion__content">
-                                        <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation. Ut enim ad minim
-                                            veniam, quis nostrud exercitation.</p>
-                                    </div>
-                                </div>
-                                <div class="collapse accordion-block">
-                                    <a role="button" class="collapse__toggle accordion__btn" href="#"><span class="accordion__icon"><span></span><span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
-                                    <div class="collapse__content accordion__content">
-                                        <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation. Ut enim ad minim
-                                            veniam, quis nostrud exercitation.</p>
-                                    </div>
-                                </div>
-                                <div class="collapse accordion-block">
-                                    <a role="button" class="collapse__toggle accordion__btn" href="#"><span class="accordion__icon"><span></span><span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
-                                    <div class="collapse__content accordion__content">
-                                        <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation. Ut enim ad minim
-                                            veniam, quis nostrud exercitation.</p>
-                                    </div>
-                                </div>
-                                <div class="collapse accordion-block">
-                                    <a role="button" class="collapse__toggle accordion__btn" href="#"><span class="accordion__icon"><span></span><span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
-                                    <div class="collapse__content accordion__content">
-                                        <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation. Ut enim ad minim
-                                            veniam, quis nostrud exercitation.</p>
-                                    </div>
-                                </div>
-                                <div class="collapse accordion-block">
-                                    <a role="button" class="collapse__toggle accordion__btn" href="#"><span class="accordion__icon"><span></span><span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
-                                    <div class="collapse__content accordion__content">
-                                        <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation. Ut enim ad minim
-                                            veniam, quis nostrud exercitation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Accordion ./end-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Half-half  -->
-            <section class="mb-3x mb-tablet-2x mb-desktop-3x">
-                <div class="wrapper wrapper--full">
-                    <div class="flex flex-row">
-                        <div class="flex-col-desktop-6 match-height">
-                            <div class="half half--text text-center text-left-desktop">
-                                <div class="half--text-content">
-                                    <h3 class="mb-2x">Lorem Ipsum Dolor Sit</h3>
-                                    <p class="mb-3x mb-tablet-2x mb-desktop-3x">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim
-                                        ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat eiusmod tempor incididunt dolor
-                                        ipsum ut labore et dolore.</p>
-                                    <a href="#" class="btn btn--lg btn--ghost btn--ghost--dark hidden-desktop-down">Find out more</a>
-                                    <a href="#" class="btn btn--ghost btn--ghost--dark hidden-desktop">Find out more</a>
-                                </div>
-                                <div class="shape-container">
-                                    <img class="shape shape--half shape--half--top-right" src="{{ siteUrl }}src/img/standard-inner/shape-05.svg"
-                                    alt="shape-right">
-                                </div>
+                        <div class="flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-4 flex-col-desktop-offset-0">
+                            <div class="brick">
+                                <h3>Front-End Developer</h3>
+                                <i class="icon-pin"></i>
+                                <p class="dib">Data Chemist -
+                                    <a href="#" class="link-plain">Dublin, Ireland</a>
+                                </p>
+                                <p class="mb-0x">
+                                    <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i>
+                                    </a>
+                                </p>
                             </div>
                         </div>
-                        <div class="flex-col-desktop-6 pos-r match-height">
-                            <div class="half half--img" style="background-image: url('{{ siteUrl }}src/img/standard-inner/bgr-half-02.jpg')">
+                        <div class="flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-4 flex-col-desktop-offset-0">
+                            <div class="brick">
+                                <h3>UI/UX senior Designer</h3>
+                                <i class="icon-pin"></i>
+                                <p class="dib">Data Chemist -
+                                    <a href="#" class="link-plain">Dublin, Ireland</a>
+                                </p>
+                                <p class="mb-0x">
+                                    <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i>
+                                    </a>
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="flex-col-desktop-6 pos-r match-height hidden-desktop-down">
-                            <div class="half half--img" style="background-image: url('{{ siteUrl }}src/img/standard-inner/bgr-half-03.jpg')">
-                            </div>
-                        </div>
-                        <div class="flex-col-desktop-6 match-height">
-                            <div class="half half--text half--text--alt text-center text-left-desktop">
-                                <h3 class="mb-2x">Lorem Ipsum Dolor Sit</h3>
-                                <p class="mb-5x">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi
-                                    ut aliquip ex ea commodo consequat eiusmod
-                                    tempor incididunt dolor ipsum ut labore et
-                                    dolore.</p>
-                                <div class="shape-container">
-                                    <img class="shape shape--half shape--half--bottom-left" src="{{ siteUrl }}src/img/standard-inner/shape-06.svg"
-                                    alt="shape--left">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-col-desktop-6 pos-r match-height hidden-desktop">
-                            <div class="half half--img bgr-center" style="background-image: url('{{ siteUrl }}src/img/standard-inner/bgr-half-03.jpg')">
+                        <div class="flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-4 flex-col-desktop-offset-0">
+                            <div class="brick">
+                                <h3>Project manager</h3>
+                                <i class="icon-pin"></i>
+                                <p class="dib">Data Chemist -
+                                    <a href="#" class="link-plain">Dublin, Ireland</a>
+                                </p>
+                                <p class="mb-0x">
+                                    <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Half-half  /.end-->
-            <!-- Full width -->
-            <section class="mb-2x mb-desktop-3x">
-                <div class="wrapper wrapper--full">
-                    <div class="flex flex-row">
-                        <div class="full full--top full--overlay" style="background: url('{{ siteUrl }}src/img/standard-inner/bgr-half-01.jpg')">
-                            <div class="flex-col-mobile-6 flex-col-mobile-offset-3 flex-col-desktop-4 flex-col-desktop-offset-4 text-center">
-                                <i class="full__icon icon-users"></i>
-                                <h2 class="type-lg type-lg--alt mb-1x">View our Team</h2>
-                                <p class="mb-3x type-narrow">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua.</p>
-                                <a href="#" class="btn btn--lg btn--ghost">View</a>
-                            </div>
-                            <div class="shape-container">
-                                <img class="shape shape--full shape--full--top-left" src="{{ siteUrl }}src/img/standard-inner/shape-01.svg"
-                                alt="shape-full-top-left">
-                                <img class="shape shape--full shape--full--top-right" src="{{ siteUrl }}src/img/standard-inner/shape-02.svg"
-                                alt="shape--full--top-right">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="full full--bottom">
-                            <div class="flex-col-mobile-6 flex-col-mobile-offset-3 flex-col-desktop-4 flex-col-desktop-offset-4 text-center">
-                                <i class="full__icon icon-logo-round"></i>
-                                <h2 class="type-lg type-lg--alt mb-1x">Open Positions</h2>
-                                <p class="mb-3x type-narrow">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod.</p>
-                            </div>
-                            <div class="shape-container">
-                                <img class="shape shape--alt" src="{{ siteUrl }}src/img/standard-inner/shape-04.svg" alt="shape-full-bottom">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrapper wrapper--full wrapper--full--alt bg-light--alt">
-                    <div class="wrapper">
-                        <div class="brick-container">
-                            <div class="flex-row">
-                                <div class="flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-4 flex-col-desktop-offset-0">
-                                    <div class="brick">
-                                        <h3>Front-End Developer</h3>
-                                        <i class="icon-pin"></i>
-                                        <p class="dib">Data Chemist -
-                                            <a href="#" class="link-plain">Dublin, Ireland</a>
-                                        </p>
-                                        <p class="mb-0x">
-                                            <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i></a>
-                                        </p>
+            </div>
+        </div>
+    </section>
+    <!-- Full width /.end-->
+    <!-- Contact: Half-half -->
+    <section>
+        <div class="wrapper wrapper--full">
+            <div class="flex flex-row">
+                <div class="flex-col-desktop-7">
+                    <!-- Contact Form -->
+                    <div class="half half--form match-height">
+                        <div class="form form--primary">
+                            <h2 class="type-lg type-lg--alt">Join our team / Send us a message</h2>
+                            <p class="mb-5x mb-tablet-6x">We’re looking for talent of all descriptions to join our mission. If you’d like to work with the Data Chemist team get in touch below.</p>
+                            <p class="mb-2x mb-tablet-3x text-left-tablet">
+                                <span>Required fields are indicated *</span></p>
+                            <form>
+                                <label for="name">Name
+                                    <span>*</span></label>
+                                <input class="input-full" type="text" id="name" name="name" placeholder="Title Here" required="required">
+                                <label for="email">E-mail Address
+                                    <span>*</span></label>
+                                <input class="input-full" type="email" id="email" name="email" placeholder="Email here" required="required">
+                                <label for="phone">Phone</label>
+                                <input class="input-full" type="tel" id="phone" name="phone" placeholder="Enter number">
+                                <label for="role">Business Role / Inquiry Type
+                                    <span>*</span></label>
+                                <div class="select-container">
+                                    <div class="select__triangle"></div>
+                                    <select id="role" name="role">
+                                        <option value="" disabled="disabled" selected="selected">Please select</option>
+                                        <option value="role1">Engineering</option>
+                                        <option value="role2">Business Development</option>
+                                        <option value="role3">Marketing</option>
+                                        <option value="role4">Operations</option>
+                                        <option value="role5">Other</option>
+                                    </select>
+                                </div>
+                                <label for="file" class="mb-3x">
+                                    <div class="icon-container">
+                                        <i class="icon-add"></i>
                                     </div>
+                                    Attach CV</label>
+                                <input type="file" name="file" id="file">
+                                <label for="info">Additional Information</label>
+                                <textarea class="textarea-full" id="info" name="info" placeholder="Message here"></textarea>
+                                <div class="text-center text-left-desktop">
+                                    <input type="submit" class="btn btn--lg btn--primary" name="submitbtn" value="Submit">
                                 </div>
-                                <div class="flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-4 flex-col-desktop-offset-0">
-                                    <div class="brick">
-                                        <h3>UI/UX senior Designer</h3>
-                                        <i class="icon-pin"></i>
-                                        <p class="dib">Data Chemist -
-                                            <a href="#" class="link-plain">Dublin, Ireland</a>
-                                        </p>
-                                        <p class="mb-0x">
-                                            <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-4 flex-col-desktop-offset-0">
-                                    <div class="brick">
-                                        <h3>Project manager</h3>
-                                        <i class="icon-pin"></i>
-                                        <p class="dib">Data Chemist -
-                                            <a href="#" class="link-plain">Dublin, Ireland</a>
-                                        </p>
-                                        <p class="mb-0x">
-                                            <a href="#" class="link-plain">Read more<i class="icon-arrow_right-01"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Full width /.end-->
-            <!-- Contact: Half-half  -->
-            <section>
-                <div class="wrapper wrapper--full">
-                    <div class="flex flex-row">
-                        <div class="flex-col-desktop-7">
-                            <!-- Contact Form -->
-                            <div class="half half--form match-height">
-                                <div class="form form--primary">
-                                    <h2 class="type-lg type-lg--alt">Join our team / Send us a message</h2>
-                                    <p class="mb-5x mb-tablet-6x">We’re looking for talent of all descriptions
-                                        to join our mission. If you’d like to work
-                                        with the Data Chemist team get in touch
-                                        below.</p>
-                                    <p class="mb-2x mb-tablet-3x text-left-tablet"><span>Required fields are indicated *</span></p>
-                                    <form>
-                                        <label for="name">Name <span>*</span></label>
-                                        <input class="input-full" type="text" id="name" name="name" placeholder="Title Here"
-                                        required>
-                                        <label for="email">E-mail Address <span>*</span></label>
-                                        <input class="input-full" type="email" id="email" name="email" placeholder="Email here"
-                                        required>
-                                        <label for="phone">Phone</label>
-                                        <input class="input-full" type="tel" id="phone" name="phone" placeholder="Enter number">
-                                        <label for="role">Business Role / Inquiry Type <span>*</span></label>
-                                        <div class="select-container">
-                                            <div class="select__triangle"></div>
-                                            <select id="role" name="role">
-                                                <option value="" disabled selected>Please select</option>
-                                                <option value="role1">Engineering</option>
-                                                <option value="role2">Business Development</option>
-                                                <option value="role3">Marketing</option>
-                                                <option value="role4">Operations</option>
-                                                <option value="role5">Other</option>
-                                            </select>
-                                        </div>
-                                        <label for="file" class="mb-3x">
-                                            <div class="icon-container">
-                                                <i class="icon-add"></i>
-                                            </div>
-                                            Attach CV</label>
-                                        <input type="file" name="file" id="file">
-                                        <label for="info">Additional Information</label>
-                                        <textarea class="textarea-full" id="info" name="info" placeholder="Message here"></textarea>
-                                        <div class="text-center text-left-desktop">
-                                            <input type="submit" class="btn btn--lg btn--primary" name="submitbtn" value="Submit">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- Contact Form /.end -->
-                        </div>
-                        <div class="flex-col-desktop-5">
-                            <div class="half half--dark half--form half--form--alt match-height text-center text-left-desktop">
-                                <div class="contact contact--narrow contact--dark">
-                                    <h2 class="mb-3x mb-tablet-1x mb-desktop-2x type-lg type-lg--alt">Contact</h2>
-                                    <p class="mb-6x mb-tablet-5x hidden-tablet-down">Alternatively, you can contact us by phone
-                                        or email using the information listed below.</p>
-                                    <dl class="contact__list">
-                                        <dt><i class="icon-phone"></i></dt>
-                                        <dd>
-                                            <a href="tel:+35315324263" class="link-clean color-white">+ (353) 1 532 4263</a>
-                                        </dd>
-                                    </dl>
-                                    <dl class="contact__list">
-                                        <dt><i class="icon-email"></i></dt>
-                                        <dd>
-                                            <a href="mailto:info@datachemist.net" class="color-white link-clean">info@datachemist.net</a>
-                                        </dd>
-                                    </dl>
-                                    <dl class="contact__list contact__list--top">
-                                        <dt><i class="icon-pin-2"></i></dt>
-                                        <dd>32 Data Chemist Road,
-                                            <br>Rathmines,
-                                            <br>Dublin,
-                                            <br>Ireland</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Section: Blog Sign up -->
-            <section class="section bg-primary background--cover background--pos-center pb-0x"
-            style="background-image: url('{{ siteUrl }}src/img/bg_shapes-01.svg')>
-                <div class="wrapper">
-                    <div class="flex-row">
-                        <div class="flex-col-desktop-4 flex-col-desktop-offset-4 text-center pt-3x  pt-tablet-1x pt-desktop-4x">
-                            <h2 class="color-white">Blog Sign Up</h2>
-                            <p class="color-white">Sign up to our blog to receive the latest posts.Unsubscribe
-                                at any time.</p>
-                        </div>
-                        <div class="flex-col-mobile-6 flex-col-mobile-offset-3 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-6 text-center">
-                            <form class="form form--blog">
-                                <input type="email" class="input-full" name="email" placeholder="Enter email address">
-                                <input type="submit" class="btn btn--lg btn--ghost" name="submitbtn" value="Subscribe">
                             </form>
                         </div>
                     </div>
+                    <!-- Contact Form /.end -->
                 </div>
-            </section>
-            <!-- Section: Blog Sign up /.end -->
-        </main>
-        <!-- Main /.end-->
+                <div class="flex-col-desktop-5">
+                    <div class="half half--dark half--form half--form--alt match-height text-center text-left-desktop">
+                        <div class="contact contact--narrow contact--dark">
+                            <h2 class="mb-3x mb-tablet-1x mb-desktop-2x type-lg type-lg--alt">Contact</h2>
+                            <p class="mb-6x mb-tablet-5x hidden-tablet-down">Alternatively, you can contact us by phone or email using the information listed below.</p>
+                            <dl class="contact__list">
+                                <dt>
+                                    <i class="icon-phone"></i>
+                                </dt>
+                                <dd>
+                                    <a href="tel:+35315324263" class="link-clean color-white">+ (353) 1 532 4263</a>
+                                </dd>
+                            </dl>
+                            <dl class="contact__list">
+                                <dt>
+                                    <i class="icon-email"></i>
+                                </dt>
+                                <dd>
+                                    <a href="mailto:info@datachemist.net" class="color-white link-clean">info@datachemist.net</a>
+                                </dd>
+                            </dl>
+                            <dl class="contact__list contact__list--top">
+                                <dt>
+                                    <i class="icon-pin-2"></i>
+                                </dt>
+                                <dd>32 Data Chemist Road,
+                                    <br>Rathmines,
+                                    <br>Dublin,
+                                    <br>Ireland</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: Blog Sign up -->
+    <section class="section bg-primary background--cover background--pos-center pb-0x" style="background-image: url('{{ siteUrl }}src/img/bg_shapes-01.svg')>
+                <div class=" wrapper"=" wrapper""="wrapper""">
+        <div class="flex-row">
+            <div class="flex-col-desktop-4 flex-col-desktop-offset-4 text-center pt-3x  pt-tablet-1x pt-desktop-4x">
+                <h2 class="color-white">Blog Sign Up</h2>
+                <p class="color-white">Sign up to our blog to receive the latest posts.Unsubscribe at any time.</p>
+            </div>
+            <div class="flex-col-mobile-6 flex-col-mobile-offset-3 flex-col-tablet-6 flex-col-tablet-offset-3 flex-col-desktop-6 text-center">
+                <form class="form form--blog">
+                    <input type="email" class="input-full" name="email" placeholder="Enter email address">
+                    <input type="submit" class="btn btn--lg btn--ghost" name="submitbtn" value="Subscribe">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Blog Sign up /.end -->
+</main>
+<!-- Main /.end-->
 {% endblock %}
