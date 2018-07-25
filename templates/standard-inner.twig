@@ -5,11 +5,11 @@
             <!--[if IE 9]><video style="display: none;"><![endif]-->
             {% set bannerImage = entry.bannerImage.one() %}
             {% if bannerImage %}
-                <source srcset="{{ bannerImage.one().getUrl('stiBanner') }}" media="(min-width: 1000px)">
-                <source srcset="{{ bannerImage.one().getUrl('stiBanner') }}" media="(min-width: 760px)">
+                <source srcset="{{ bannerImage.getUrl('stiBanner') }}" media="(min-width: 1000px)">
+                <source srcset="{{ bannerImage.getUrl('stiBanner') }}" media="(min-width: 760px)">
                 <!--[if IE 9]></video><![endif]-->
                 <!--1440x390-->
-                <img src="{{ bannerImage.one().getUrl('stiBanner') }}" alt=""/>
+                <img src="{{ bannerImage.getUrl('stiBanner') }}" alt=""/>
             </picture>
         {% endif %}
         <div class="wrapper wrapper--narrow hero__overlay text-center">
