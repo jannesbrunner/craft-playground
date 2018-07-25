@@ -129,64 +129,23 @@
             </div>
             <div class="flex-row">
                 <div class="flex-col-desktop-8 flex-col-desktop-offset-2">
-                    <!-- Accordion -->
-                    <div class="collapse-wrapper accordion-wrapper accordion-wrapper--full accordion" data-breakpoint="0">
-                        <div class="collapse accordion-block">
-                            <a role="button" class="collapse__toggle accordion__btn" href="#">
-                                <span class="accordion__icon">
-                                    <span></span>
-                                    <span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
-                            <div class="collapse__content accordion__content">
-                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                            </div>
+                    {% if entry.faq %}
+                        <!-- Accordion -->
+                        <div class="collapse-wrapper accordion-wrapper accordion-wrapper--full accordion" data-breakpoint="0">
+                            {% for block in entry.faq.all() %}
+                                <div class="collapse accordion-block">
+                                    <a role="button" class="collapse__toggle accordion__btn" href="#">
+                                        <span class="accordion__icon">
+                                            <span></span>
+                                            <span></span></span><span>{{ block.question }}</span></a>
+                                    <div class="collapse__content accordion__content">
+                                        <p class="text-left mb-0x">{{block.answer}}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
                         </div>
-                        <div class="collapse accordion-block">
-                            <a role="button" class="collapse__toggle accordion__btn" href="#">
-                                <span class="accordion__icon">
-                                    <span></span>
-                                    <span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
-                            <div class="collapse__content accordion__content">
-                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                            </div>
-                        </div>
-                        <div class="collapse accordion-block">
-                            <a role="button" class="collapse__toggle accordion__btn" href="#">
-                                <span class="accordion__icon">
-                                    <span></span>
-                                    <span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
-                            <div class="collapse__content accordion__content">
-                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                            </div>
-                        </div>
-                        <div class="collapse accordion-block">
-                            <a role="button" class="collapse__toggle accordion__btn" href="#">
-                                <span class="accordion__icon">
-                                    <span></span>
-                                    <span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
-                            <div class="collapse__content accordion__content">
-                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                            </div>
-                        </div>
-                        <div class="collapse accordion-block">
-                            <a role="button" class="collapse__toggle accordion__btn" href="#">
-                                <span class="accordion__icon">
-                                    <span></span>
-                                    <span></span></span><span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span></a>
-                            <div class="collapse__content accordion__content">
-                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                            </div>
-                        </div>
-                        <div class="collapse accordion-block">
-                            <a role="button" class="collapse__toggle accordion__btn" href="#">
-                                <span class="accordion__icon">
-                                    <span></span>
-                                    <span></span></span><span>Ut enim ad minim veniam, quis?</span></a>
-                            <div class="collapse__content accordion__content">
-                                <p class="text-left mb-0x">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion ./end-->
+                        <!-- Accordion ./end-->
+                    {% endif %}
                 </div>
             </div>
         </div>
